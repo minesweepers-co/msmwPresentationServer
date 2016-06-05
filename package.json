@@ -1,0 +1,9 @@
+{
+  "name": "My-stock-my-way",
+  "version": "0.1.0",
+  "dependencies":
+  {
+    "express": "~4.0.0",
+    "ejs": "~1.0.0"
+  }
+}
