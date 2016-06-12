@@ -1,8 +1,12 @@
-var express    =    require('express');
-var app        =    express();
+var express = require('express');
+var app = express();
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 
+app.use(cookieParser());
 require('./router/main')(app);
-app.set('views',__dirname + '/views');
+app.set('views', __dirname + '/views');
+app.use('/static', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080)
 
